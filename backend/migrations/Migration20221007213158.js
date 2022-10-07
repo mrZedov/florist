@@ -5,7 +5,7 @@ const { Migration } = require('@mikro-orm/migrations');
 class Migration20221007213158 extends Migration {
 
   async up() {
-    this.addSql('select 123');
+    this.addSql('select 19');
   }
 
 }
