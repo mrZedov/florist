@@ -38,3 +38,5 @@ lerna-debug.log*
 .prettierrc
 nest-cli.json
 tsconfig.build.json
+
+volume/*

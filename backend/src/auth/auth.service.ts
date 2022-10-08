@@ -18,10 +18,10 @@ export class AuthService {
     const payload = { username: data.user.login, sub: data.user.id };
     return {
       access_token: this.jwtService.sign(payload, {
-        expiresIn: '1d',
+        expiresIn: '1m',
       }),
       refresh_token: this.jwtService.sign(payload, {
-        expiresIn: '1d',
+        expiresIn: '1m',
       }),
       error: data.error,
     };
