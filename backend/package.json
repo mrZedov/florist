@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@nestjs/schedule": "^2.1.0",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
     "dotenv": "^16.0.3",
@@ -53,6 +54,7 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
+    "@types/cron":"^2.0.0",
     "@nestjs/cli": "^8.0.0",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
