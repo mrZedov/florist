@@ -27,12 +27,13 @@ export class CardsImportService {
       const recCard = await this.cardsService.findByFileName(f);
       if (recCard) continue;
       const fileName = this.getFileName(f);
-      await this.cardsService.create({ fileName: f, name: fileName });
+      const card = await this.cardsService.create({ fileName: f, name: fileName.name });
+      fs.renameSync('.\\volume\\' + f, '.\\volume\\' + card.id + '.' + fileName.ext);
     }
   }
 
   getFileName(f) {
     const dotIndex = f.lastIndexOf('.');
-    return f.substr(0, dotIndex);
+    return { name: f.substr(0, dotIndex), ext: f.substr(dotIndex + 1) };
   }
 }
