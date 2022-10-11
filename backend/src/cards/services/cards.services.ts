@@ -18,6 +18,7 @@ export class CardsService {
   async create(data) {
     const newCard = await this.repositoryCards.create(data);
     await this.repositoryCards.persistAndFlush(newCard);
+    return newCard;
   }
 
   async findByFileName(fileName: string): Promise<any> {

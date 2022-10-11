@@ -1,17 +1,15 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@mikro-orm/nestjs';
 import { EntityRepository } from '@mikro-orm/postgresql';
-import { InternalServerErrorException } from '@nestjs/common';
 import { Cards } from '../entities/cards.entity';
-import { UsersService } from 'src/users/services/users.services';
 import { StudiedCards } from '../entities/studied-cards.entity';
-import { CardsService } from './cards.services';
-import { EntityManager, MikroORM, EntityData } from '@mikro-orm/core';
+import { EntityManager, MikroORM } from '@mikro-orm/core';
 
 @Injectable()
 export class StudiedCardsService {
   constructor(
     @InjectRepository(StudiedCards) private readonly repositoryStudiedCards: EntityRepository<StudiedCards>,
+    @InjectRepository(Cards) private readonly repositoryCards: EntityRepository<Cards>,
     private readonly orm: MikroORM,
   ) {}
 
@@ -20,11 +18,29 @@ export class StudiedCardsService {
   }
 
   async getStudied(userId: number) {
-    const studiedCards = await this.find({ userId: userId });
+    let studiedCards = await this.find({ userId: userId });
     if (studiedCards.length < +process.env.CARDS_IN_STUDIING) {
       const newCards = await this.addStudiedCards({ userId: userId, count: +process.env.CARDS_IN_STUDIING - studiedCards.length });
     }
-    return await this.findStudiedCards(userId);
+    studiedCards = await this.findStudiedCards(userId);
+    return {
+      studiedCards: studiedCards[0],
+      alternativeName: await this.getAlternativeName(),
+    };
+  }
+
+  async getAlternativeName() {
+    const result = [];
+    let countName = +process.env.ALTERNATIVE_NAME_CARD;
+    const em = (this.orm.em as EntityManager).fork();
+    const cardNames = await em.getConnection().execute(
+      `select distinct c.name from cards c where c.deleted=false 
+      `,
+    );
+    while (countName-- > 0) {
+      result.push(cardNames[Math.floor(Math.random() * (cardNames.length - 1))].name);
+    }
+    return result;
   }
 
   async findStudiedCards(userId) {
