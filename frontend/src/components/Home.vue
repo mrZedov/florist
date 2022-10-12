@@ -1,9 +1,17 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      123
-      <img :src="`/${content.id}.jpg`" />
-      {{ content }}
+      <div>
+        <img :src="`/volume/${studiedCards.id}.${studiedCards.file_ext}`" />
+      </div>
+      <blog-post
+        v-for="name in alternativeName"
+        v-bind:key="name"
+        v-bind:post="name"
+      >
+        <br />
+        <button v-on:click="onClickNameFlower(name)">{{ name }}</button>
+      </blog-post>
     </header>
   </div>
 </template>
@@ -14,13 +22,15 @@
     name: "Home",
     data() {
       return {
-        content: "1234",
+        content: "",
+        studiedCards: "",
+        alternativeName: "",
       };
     },
     mounted() {
       UserService.getCard().then(
         (response) => {
-          this.content = response.data.studiedCards;
+          this.studiedCards = response.data.studiedCards;
           this.alternativeName = response.data.alternativeName;
         },
         (error) => {
@@ -32,6 +42,12 @@
             error.toString();
         }
       );
+    },
+    methods: {
+      onClickNameFlower: function (n) {
+        console.log(n);
+        UserService.sendAnswer(n);
+      },
     },
   };
 </script>

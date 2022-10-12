@@ -8,10 +8,16 @@ export class Cards {
   id!: number;
 
   @Property({ nullable: true })
-  name: string;
+  categoryId: number
 
   @Property()
-  fileName: string;
+  originalFileName: string
+
+  @Property()
+  originalFileExt: string
+  
+  @Property({ nullable: true })
+  name: string;
 
   @Property({ onCreate: () => new Date() })
   created: Date;
