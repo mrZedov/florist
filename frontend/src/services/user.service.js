@@ -20,10 +20,11 @@ class UserService {
     return axios.get(API_URL + "admin", { headers: authHeader() });
   }
 
-  sendAnswer(n) {
-    return axios.get(API_URL + "cards/checkAnswer", {
+  sendAnswer(id, n) {
+    return axios.get(API_URL + "cards/check-answer", {
       headers: authHeader(),
       params: {
+        id: id,
         n: n,
       },
     });
