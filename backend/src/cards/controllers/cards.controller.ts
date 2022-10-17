@@ -9,13 +9,13 @@ import {
   Param,
   ParseIntPipe,
   Res,
+  Query,
 } from "@nestjs/common";
 import { CardsImportService } from "../services/cards-import.service";
 import { AuthGuard } from "@nestjs/passport";
 import { JwtAuthGuard } from "src/auth/guards/auth.guard";
 import { CardsService } from "../services/cards.services";
 import { StudiedCardsService } from "../services/studied-cards.services";
-import { Response } from "express";
 
 @Controller("cards")
 export class CardsController {
@@ -25,27 +25,29 @@ export class CardsController {
     private readonly studiedCardsService: StudiedCardsService
   ) {}
 
-  @Post('check-answer/:aa')
-  //  @UseGuards(AuthGuard("jwt"), JwtAuthGuard)
+  @Get("check-answer")
+  @UseGuards(AuthGuard("jwt"), JwtAuthGuard)
   async checkAnswer(
-    @Param('aa') aa: string,
-    @Req() req: any,
-    @Res() res: Response
+    @Query("id") id: number,
+    @Query("n") n: string,
+    @Req() req: any
   ) {
-    console.log(1111);
-    res.send('data');
-    // return this.studiedCardsService.getStudied(req.user.id);
+    return this.studiedCardsService.checkAnswer({
+      userId: req.user.id,
+      cardId: id,
+      answer: n,
+    });
   }
 
-  // @Post("import")
-  // @UseGuards(AuthGuard("jwt"), JwtAuthGuard)
-  // async import() {
-  //   this.cardsImportService.importManual();
-  // }
+  @Post("import")
+  @UseGuards(AuthGuard("jwt"), JwtAuthGuard)
+  async import() {
+    this.cardsImportService.importManual();
+  }
 
-  // @Get("studied")
-  // @UseGuards(AuthGuard("jwt"), JwtAuthGuard)
-  // async getStudied(@Req() req: any) {
-  //   return this.studiedCardsService.getStudied(req.user.id);
-  // }
+  @Get("studied")
+  @UseGuards(AuthGuard("jwt"), JwtAuthGuard)
+  async getStudied(@Req() req: any) {
+    return this.studiedCardsService.getStudied(req.user.id);
+  }
 }

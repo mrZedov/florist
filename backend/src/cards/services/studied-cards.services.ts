@@ -4,14 +4,17 @@ import { EntityRepository } from "@mikro-orm/postgresql";
 import { Cards } from "../entities/cards.entity";
 import { StudiedCards } from "../entities/studied-cards.entity";
 import { EntityManager, MikroORM } from "@mikro-orm/core";
+import { CardsService } from "./cards.services";
+import { CompletedCards } from "../entities/completed-cards.entity";
 
 @Injectable()
 export class StudiedCardsService {
   constructor(
     @InjectRepository(StudiedCards)
     private readonly repositoryStudiedCards: EntityRepository<StudiedCards>,
-    @InjectRepository(Cards)
-    private readonly repositoryCards: EntityRepository<Cards>,
+    @InjectRepository(CompletedCards)
+    private readonly repositoryCompletedCards: EntityRepository<CompletedCards>,
+    private readonly cardsService: CardsService,
     private readonly orm: MikroORM
   ) {}
 
@@ -28,24 +31,27 @@ export class StudiedCardsService {
       });
     }
     studiedCards = await this.findStudiedCards(userId);
+    const alternativeName = await this.getAlternativeName(studiedCards[0].name);
+    alternativeName.push(studiedCards[0].name);
+    alternativeName.sort(() => Math.random() - 0.5);
     return {
       studiedCards: studiedCards[0],
-      alternativeName: await this.getAlternativeName(),
+      alternativeName: alternativeName,
     };
   }
 
-  async getAlternativeName() {
+  async getAlternativeName(name) {
     const result = [];
-    let countName = +process.env.ALTERNATIVE_NAME_CARD;
+    let countName = +process.env.ALTERNATIVE_NAME_CARD - 1;
     const em = (this.orm.em as EntityManager).fork();
     const cardNames = await em.getConnection().execute(
-      `select distinct c.name from cards c where c.deleted=false 
+      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'
       `
     );
     while (countName-- > 0) {
-      result.push(
-        cardNames[Math.floor(Math.random() * (cardNames.length - 1))].name
-      );
+      const idx = Math.floor(Math.random() * (cardNames.length - 1));
+      result.push(cardNames[idx].name);
+      cardNames.splice(idx, 1);
     }
     return result;
   }
@@ -91,5 +97,55 @@ export class StudiedCardsService {
       cardId: data.card.id,
     });
     await this.repositoryStudiedCards.persistAndFlush(newCard);
+  }
+
+  async fixAnswer(data) {
+    const newCard = await this.repositoryStudiedCards.findOne({
+      userId: data.userId,
+      cardId: data.cardId,
+    });
+    if (data.resAnswer) {
+      newCard.success++;
+      newCard.progress++;
+    } else {
+      newCard.fail++;
+      if (newCard.progress > 0) newCard.progress--;
+    }
+    if (newCard.progress > +process.env.MAX_CARD_PROGRESS) {
+      await this.repositoryStudiedCards.nativeDelete(newCard);
+      await this.studySuccess({
+        cardId: newCard.id,
+        userId: data.userId,
+        success: newCard.success,
+        fail: newCard.fail,
+      });
+    } else {
+      await this.repositoryStudiedCards.persistAndFlush(newCard);
+    }
+  }
+
+  async studySuccess(data) {
+    const newCard = await this.repositoryCompletedCards.create({
+      userId: data.userId,
+      cardId: data.card.id,
+      success: data.success,
+      fail: data.fail,
+    });
+    await this.repositoryStudiedCards.persistAndFlush(newCard);
+  }
+
+  async checkAnswer(data) {
+    const card = await this.cardsService.find({ id: data.cardId });
+    const resAnswer = card.name === data.answer;
+    this.fixAnswer({
+      userId: data.userId,
+      cardId: data.cardId,
+      resAnswer: resAnswer,
+    });
+    return {
+      rightAnswer: card.name,
+      resAnswer: resAnswer,
+      answer: data.answer,
+    };
   }
 }

@@ -2,12 +2,12 @@ import { Property } from '@mikro-orm/core';
 import { PrimaryKey } from '@mikro-orm/core';
 import { Entity } from '@mikro-orm/core';
 
-@Entity({ tableName: 'studied_cards' })
-export class StudiedCards {
+@Entity({ tableName: 'completed_cards' })
+export class CompletedCards {
   @PrimaryKey()
   id!: number;
 
-  @Property({ nullable: true })
+  @Property()
   userId: number;
 
   @Property()
@@ -21,10 +21,4 @@ export class StudiedCards {
 
   @Property({ default: 0 })
   fail: number;
-
-  @Property({ default: 0 })
-  progress: number;
-
-  @Property({ onCreate: () => new Date(), onUpdate: () => new Date() })
-  updated: Date;
 }
