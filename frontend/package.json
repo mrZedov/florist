@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve ",
     "build": "vue-cli-service build",
@@ -20,8 +20,7 @@
     "vue": "^3.2.41",
     "vue-router": "^4.1.5",
     "vuex": "^4.0.2",
-    "yup": "^0.32.11",
-    "vuetify":"^2.6.11"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
