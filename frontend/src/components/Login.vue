@@ -68,7 +68,7 @@
     },
     created() {
       if (this.loggedIn) {
-        this.$router.push("/profile");
+        this.$router.push("/");
       }
     },
     methods: {
@@ -77,7 +77,7 @@
 
         this.$store.dispatch("auth/login", user).then(
           () => {
-            this.$router.push("/profile");
+            this.$router.push("/");
           },
           (error) => {
             this.loading = false;
