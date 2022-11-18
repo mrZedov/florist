@@ -1,9 +1,12 @@
 <template>
   <div class="container">
     <header class="jumbotron">
-      <div>
-        <img :src="`/volume/${studiedCards.id}.${studiedCards.file_ext}`" />
-      </div>
+      
+      <b-img
+        :src="`/volume/${studiedCards.id}.${studiedCards.file_ext}`"
+        fluid
+        alt="Fluid image"
+      ></b-img>
       <button
         :class="['btn', 'btn-block', { 'btn-primary': haveAnswer() }]"
         v-on:click="onClickNextCard()"
