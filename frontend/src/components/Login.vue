@@ -1,10 +1,4 @@
 <template>
-  <div
-    class="shadow-8 m-3 surface-card text-center p-3 border-round-sm h-6rem w-9rem flex align-items-center justify-content-center font-semibold"
-  >
-    shadow-8
-  </div>
-
   <div class="col-md-12">
     <div class="card card-container">
       <img
@@ -45,7 +39,6 @@
 </template>
 
 <script>
-
   import { Form, Field, ErrorMessage } from "vee-validate";
   import * as yup from "yup";
 

@@ -63,10 +63,10 @@ export class StudiedCardsService {
         select c.id, c.original_file_ext as file_ext, c.name as name, category."name" as category, studied_c.success, studied_c.fail from cards c 
         inner join studied_cards studied_c
           left join users u on u.id = ${userId}
-        on studied_c.card_id = c.id
+        on studied_c.card_id = c.id and studied_c.user_id = ${userId}
         left join category category on category.id = c.category_id 
         order by studied_c.updated
-        limit 1
+        limit 1 offset ${Math.round(Math.random()*(+process.env.CARDS_IN_STUDIING/3))}
         `
     );
   }
@@ -78,7 +78,7 @@ export class StudiedCardsService {
       select c.* from cards c 
       left join completed_cards completed
         left join users u on u.id = ${data.userId}
-      on completed.card_id = c.id
+      on completed.card_id = c.id and completed.user_id = ${data.userId}
       left join studied_cards studied_c on studied_c.card_id=c.id and studied_c.user_id = ${data.userId}
       where completed.id is null and studied_c.id is null 
       limit ${process.env.CARDS_IN_STUDIING}      
@@ -92,6 +92,7 @@ export class StudiedCardsService {
   }
 
   async create(data) {
+    console.log(data)
     const newCard = await this.repositoryStudiedCards.create({
       userId: data.userId,
       cardId: data.card.id,
@@ -114,7 +115,7 @@ export class StudiedCardsService {
     if (newCard.progress > +process.env.MAX_CARD_PROGRESS) {
       await this.repositoryStudiedCards.nativeDelete(newCard);
       await this.studySuccess({
-        cardId: newCard.id,
+        cardId: newCard.cardId,
         userId: data.userId,
         success: newCard.success,
         fail: newCard.fail,
@@ -127,11 +128,11 @@ export class StudiedCardsService {
   async studySuccess(data) {
     const newCard = await this.repositoryCompletedCards.create({
       userId: data.userId,
-      cardId: data.card.id,
+      cardId: data.cardId,
       success: data.success,
       fail: data.fail,
     });
-    await this.repositoryStudiedCards.persistAndFlush(newCard);
+    await this.repositoryCompletedCards.persistAndFlush(newCard);
   }
 
   async checkAnswer(data) {
