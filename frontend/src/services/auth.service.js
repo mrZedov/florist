@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://i-florist.pl/api/";
+const API_URL = `http://${process.env.VUE_APP_API_URL}/api/`;
 
 class AuthService {
   login(user) {

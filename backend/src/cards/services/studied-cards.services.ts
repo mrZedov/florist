@@ -68,7 +68,6 @@ export class StudiedCardsService {
         inner join studied_cards studied_c
           left join users u on u.id = ${userId}
         on studied_c.card_id = c.id and studied_c.user_id = ${userId}
-        left join category category on category.id = c.category_id 
         `);
     return await em.getConnection().execute(`
         select c.id, c.original_file_ext as file_ext, c.name as name, c.category_id as "categoryId", category."name" as category, studied_c.success, studied_c.fail from cards c 
@@ -103,8 +102,6 @@ export class StudiedCardsService {
   }
 
   async create(data) {
-    console.log(data);
-
     const newCard = await this.repositoryStudiedCards.create({
       userId: data.userId,
       cardId: data.card.id,
