@@ -1,14 +1,15 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="studiedCards.id">
     <header class="jumbotron">
-      <div>
-        <img :src="`/volume/${studiedCards.id}.${studiedCards.file_ext}`"/>
+      <div v-if="studiedCards.id">
+        <img :src="`/volume/${studiedCards.id}.${studiedCards.file_ext}`" />
       </div>
       <button
+        v-if="studiedCards.id"
         :class="['btn', 'btn-block', { 'btn-primary': haveAnswer() }]"
         v-on:click="onClickNextCard()"
       >
-        cледующий
+        следующий
       </button>
       <blog-post
         v-for="name in alternativeName"
