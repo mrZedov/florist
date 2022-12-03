@@ -31,7 +31,10 @@ export class StudiedCardsService {
       });
     }
     studiedCards = await this.findStudiedCards(userId);
-    const alternativeName = await this.getAlternativeName(studiedCards[0].name);
+    const alternativeName = await this.getAlternativeName(
+      studiedCards[0].name,
+      studiedCards[0].categoryId
+    );
     alternativeName.push(studiedCards[0].name);
     alternativeName.sort(() => Math.random() - 0.5);
     return {
@@ -40,14 +43,16 @@ export class StudiedCardsService {
     };
   }
 
-  async getAlternativeName(name) {
+  async getAlternativeName(name, categoryId) {
     const result = [];
     let countName = +process.env.ALTERNATIVE_NAME_CARD - 1;
     const em = (this.orm.em as EntityManager).fork();
-    const cardNames = await em.getConnection().execute(
-      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'
-      `
-    );
+    const cardNames = await em
+      .getConnection()
+      .execute(
+        `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}' and ` +
+          (categoryId ? `c.category_id=${categoryId}` : `c.category_id is null`)
+      );
     while (countName-- > 0) {
       const idx = Math.floor(Math.random() * (cardNames.length - 1));
       result.push(cardNames[idx].name);
@@ -58,17 +63,22 @@ export class StudiedCardsService {
 
   async findStudiedCards(userId) {
     const em = (this.orm.em as EntityManager).fork();
-    return await em.getConnection().execute(
-      `
-        select c.id, c.original_file_ext as file_ext, c.name as name, category."name" as category, studied_c.success, studied_c.fail from cards c 
+    const count = await em.getConnection().execute(`
+        select count(c.id) from cards c 
         inner join studied_cards studied_c
           left join users u on u.id = ${userId}
-        on studied_c.card_id = c.id
+        on studied_c.card_id = c.id and studied_c.user_id = ${userId}
+        left join category category on category.id = c.category_id 
+        `);
+    return await em.getConnection().execute(`
+        select c.id, c.original_file_ext as file_ext, c.name as name, c.category_id as "categoryId", category."name" as category, studied_c.success, studied_c.fail from cards c 
+        inner join studied_cards studied_c
+          left join users u on u.id = ${userId}
+        on studied_c.card_id = c.id and studied_c.user_id = ${userId}
         left join category category on category.id = c.category_id 
         order by studied_c.updated
-        limit 1
-        `
-    );
+        limit 1 offset ${Math.round(Math.random() * (+count[0].count / 3))}
+        `);
   }
 
   private async addStudiedCards(data) {
@@ -78,7 +88,7 @@ export class StudiedCardsService {
       select c.* from cards c 
       left join completed_cards completed
         left join users u on u.id = ${data.userId}
-      on completed.card_id = c.id
+      on completed.card_id = c.id and completed.user_id = ${data.userId}
       left join studied_cards studied_c on studied_c.card_id=c.id and studied_c.user_id = ${data.userId}
       where completed.id is null and studied_c.id is null 
       limit ${process.env.CARDS_IN_STUDIING}      
@@ -87,11 +97,14 @@ export class StudiedCardsService {
 
     let i = 0;
     while (i < data.count) {
+      if (i > freeCards.length || !freeCards[i]) break;
       await this.create({ card: freeCards[i++], userId: data.userId });
     }
   }
 
   async create(data) {
+    console.log(data);
+
     const newCard = await this.repositoryStudiedCards.create({
       userId: data.userId,
       cardId: data.card.id,
@@ -114,7 +127,7 @@ export class StudiedCardsService {
     if (newCard.progress > +process.env.MAX_CARD_PROGRESS) {
       await this.repositoryStudiedCards.nativeDelete(newCard);
       await this.studySuccess({
-        cardId: newCard.id,
+        cardId: newCard.cardId,
         userId: data.userId,
         success: newCard.success,
         fail: newCard.fail,
@@ -127,11 +140,11 @@ export class StudiedCardsService {
   async studySuccess(data) {
     const newCard = await this.repositoryCompletedCards.create({
       userId: data.userId,
-      cardId: data.card.id,
+      cardId: data.cardId,
       success: data.success,
       fail: data.fail,
     });
-    await this.repositoryStudiedCards.persistAndFlush(newCard);
+    await this.repositoryCompletedCards.persistAndFlush(newCard);
   }
 
   async checkAnswer(data) {

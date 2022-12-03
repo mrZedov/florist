@@ -45,7 +45,8 @@ export class CardsImportService {
 
   parseName(name: string) {
     const fName = this.getFileName(name);
-    let s = fName.name.replaceAll("_", " ");
+//    let s = fName.name.replaceAll("_", " ");
+    let s = fName.name.replaceAll("***", "***");
     s = s.replaceAll("  ", " ");
     s = s.replaceAll("  ", " ");
     s = s.replaceAll("  ", " ");

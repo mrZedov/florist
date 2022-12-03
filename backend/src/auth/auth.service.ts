@@ -1,11 +1,14 @@
-import { EntityData } from '@mikro-orm/core';
-import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import { UsersService } from 'src/users/services/users.services';
+import { EntityData } from "@mikro-orm/core";
+import { Injectable, UnauthorizedException } from "@nestjs/common";
+import { JwtService } from "@nestjs/jwt";
+import { UsersService } from "src/users/services/users.services";
 
 @Injectable()
 export class AuthService {
-  constructor(private readonly jwtService: JwtService, private readonly userService: UsersService) {}
+  constructor(
+    private readonly jwtService: JwtService,
+    private readonly userService: UsersService
+  ) {}
 
   async login(data: EntityData<any>) {
     if (!data.user) {
@@ -18,10 +21,10 @@ export class AuthService {
     const payload = { username: data.user.login, sub: data.user.id };
     return {
       access_token: this.jwtService.sign(payload, {
-        expiresIn: '90d',
+        expiresIn: "30d",
       }),
       refresh_token: this.jwtService.sign(payload, {
-        expiresIn: '90d',
+        expiresIn: "30d",
       }),
       error: data.error,
     };
