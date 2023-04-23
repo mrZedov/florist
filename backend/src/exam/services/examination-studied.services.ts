@@ -48,15 +48,17 @@ export class ExaminationStudiedService {
       await this.examinationAnswersCrudService.find({
         examinationTickets: id,
       })
-      )
-      // .map((el) => {        return el.name;      });
+    ).map((el) => {
+      return el.name;
+    });
+    return cardNames;
     // const cardNames1 = await em.getConnection().execute(      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'      `   );
     while (countName-- > 0) {
       const idx = Math.floor(Math.random() * (cardNames.length - 1));
       result.push(cardNames[idx].name);
       cardNames.splice(idx, 1);
     }
-     return result;
+    return result;
   }
 
   async findStudiedCard(userId): Promise<any> {
