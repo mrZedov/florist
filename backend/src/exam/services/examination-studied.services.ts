@@ -51,6 +51,8 @@ export class ExaminationStudiedService {
     ).map((el) => {
       return el.name;
     });
+    console.log('cardNames')
+    console.log(cardNames)
     return cardNames;
     // const cardNames1 = await em.getConnection().execute(      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'      `   );
     while (countName-- > 0) {
