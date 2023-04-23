@@ -1,27 +1,13 @@
-import {
-  Get,
-  Controller,
-  Post,
-  UseGuards,
-  Body,
-  UsePipes,
-  Req,
-  Param,
-  ParseIntPipe,
-  Res,
-  Query,
-} from "@nestjs/common";
-import { CardsImportService } from "../services/cards-import.service";
+import { Controller, Get, Post, Query, Req, UseGuards } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 import { JwtAuthGuard } from "src/auth/guards/auth.guard";
-import { CardsService } from "../services/cards.services";
+import { CardsImportService } from "../services/cards-import.service";
 import { StudiedCardsService } from "../services/studied-cards.services";
 
 @Controller("cards")
 export class CardsController {
   constructor(
     private readonly cardsImportService: CardsImportService,
-    private readonly cardsService: CardsService,
     private readonly studiedCardsService: StudiedCardsService
   ) {}
 

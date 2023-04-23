@@ -12,6 +12,22 @@ class UserService {
     return axios.get(API_URL + "cards/studied", { headers: authHeader() });
   }
 
+  getExam() {
+    return axios.get(API_URL + "examination/studied", {
+      headers: authHeader(),
+    });
+  }
+
+  sendAnswerExam(id, n) {
+    return axios.get(API_URL + "examination/check-answer", {
+      headers: authHeader(),
+      params: {
+        id: id,
+        n: n,
+      },
+    });
+  }
+
   getModeratorBoard() {
     return axios.get(API_URL + "mod", { headers: authHeader() });
   }

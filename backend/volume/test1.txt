@@ -1,4 +1,4 @@
-RL26 - CZERWIEC 2022
+
 
 1--4
 Którą technikę należy zastosować w przypadku mocowania mchu do bazy wieńca ze słomy?
@@ -54,7 +54,7 @@ narcyzów.
 strelicji.
 
 
-7--3 (рис)
+7--3 1007
 
 Który rodzaj kwiatostanu jest przedstawiony na zamieszczonym rysunku?
 
@@ -244,9 +244,8 @@ noża.
 małego sekatora.
 
 
-28--4(рис)
+28--4 1028
 Do posadzenia w pojemniku zakupiono 5 sztuk roślin o kwiatach czerwonych. Na podstawie danych zamieszczonych w tabeli oblicz koszt zakupu roślin.
-Do posadzenia w pojemniku zakupiono 5 sztuk roślin o kwiatach 
 
 17,50 zł
 20,00 zł
@@ -362,8 +361,6 @@ haftkowanie.
 
 
 
-KWALIFIKACJA RL26 - STYCZEŃ 2022
-2 +++++
 1--2
 W kompozycji o kolorach komplementarnych, kwiaty żółte należy połączyć
 
@@ -435,7 +432,7 @@ Poduszka i wieniec warszawski.
 Pnącze i wianek.
 
 
-9--2(рис)
+9--2 2009
 Opis zamieszczony w ramce dotyczy
 
 chrząszczy.
@@ -524,7 +521,7 @@ Aloesu i opuncji.
 Difenbachii i oleandra.
 
 
-19--3 (рис)
+19--3 2019
 Na rysunku przedstawiono kompozycję wykonaną zgodnie z zasadą złotego podziału. Ile wynosi jej wysokość (c), jeśli a = 30 cm?
 
 50 cm
@@ -551,7 +548,7 @@ Wianek ze słomy i drut na kołku.
 Ring z gąbki do żywych roślin i drut wyrobowy.
 
 
-22--1 (рис)
+22--1 2022
 Na zamieszczonym rysunku przedstawiono kompozycję w stylu
 
 wegetatywnym.
@@ -578,7 +575,7 @@ promienisty układ łodyg i wiązanie pojedyncze.
 równoległy układ łodyg i wiązanie podwójne.
 
 
-25--3 (рис)
+25--3 2025
 Na którym rysunku przedstawiono liść fatsji japońskiej?
 
 Na rysunku 3.
@@ -605,13 +602,6 @@ Paprocie, palmy, dziurawce.
 Gipsówki, szparagi, goździki.
 
 
-*28--2
-Która czynność przedłuża trwałość kwiatów lewkonii letniej?
-
-Usunięcie pylników.
-Zbiór wraz z korzeniami.
-Wstawienie do gorącej wody.
-Zbiór w stadium niewybarwionych pąków.
 
 
 29--2
@@ -641,7 +631,7 @@ pozostawieniu uszkodzonych liści.
 zastosowaniu preparatów pochłaniających etylen.
 
 
-32--4 (рис)
+32--4 2032
 Na rysunku przedstawiono wieniec, którym w starożytności nagradzano zwycięzców igrzysk. Do jego wykonania zastosowano
 
 rozmaryn.
@@ -668,7 +658,7 @@ Chryzantemy i piwonie.
 Gipsówki i goździki.
 
 
-35--2 (рис)
+35--2 2035
 Do wykonania przedstawionego na rysunku bukietu ślubnego typu kamelia, florysta powinien wybrać
 
 płatki bławatka.
@@ -686,7 +676,7 @@ Zawilec, lilia, forsycja.
 Lilak, konwalia, lilia.
 
 
-37--4 (рис)
+37--4 2037
 Który zestaw narzędzi, poza nożem i sekatorem, należy zastosować do wykonania kompozycji przedstawionej na rysunku?
 
 Kombinerki, szczypce półokrągłe i taker.
@@ -713,7 +703,7 @@ Begonia królewska, bluszcz i fitonia.
 Eszeweria, fiołek afrykański i męczennica.
 
 
-40--4 (рис)
+40--4 2040
 Przedstawiona na rysunku roślina to
 
 Ornithogalum.
@@ -722,8 +712,6 @@ Lilium.
 Alstroemeria.
 
 
-KWALIFIKACJA RL26 - CZERWIEC 2021
-3++++++
 
 
 1--1
@@ -735,7 +723,7 @@ jałowiec chiński.
 klon japoński.
 
 
-2--3
+2--3 рис 3002
 Który środek techniczny przeznaczony jest do wykonania kompozycji przedstawionej na rysunku?
 
 Pinholder.
@@ -751,14 +739,6 @@ obraz z kwiatów i liści.
 bukiet ślubny.
 kompozycję przestrzenną.
 
-
-!!!4--1 (рис)
-Na zamieszczonym rysunku przedstawiono kompozycję w stylu
-
-wegetatywnym.
-strukturalnym.
-linearnym.
-dekoracyjnym.
 
 
 5--1
@@ -887,7 +867,7 @@ Cążki.
 Okulizak.
 
 
-19--4 (рис)
+19--4 3019
 Korzystając z danych zamieszczonych w tabeli, oblicz koszt robocizny wykonania kompozycji, przyjmując, że stanowi ona 30% kosztów zużytych materiałów florystycznych.
 
 25,50 zł
@@ -895,14 +875,6 @@ Korzystając z danych zamieszczonych w tabeli, oblicz koszt robocizny wykonania 
 27,00 zł
 28,20 zł
 
-
-!!!20--1 (рис)
-Zwartnica (Hippeastrum) przedstawiona na rysunku jest rośliną cebulową o ozdobnych kwiatach. Po kwitnieniu rośliny należy
-	
-pozwolić na rozwój liści, a następnie wprowadzić ją w stan spoczynku.
-umieścić ją w ciemności.
-obciąć liście.
-wyrzucić cebulę, która nie będzie już przydatna.
 
 
 21--2
@@ -922,14 +894,6 @@ Jakie wymiary na rysunku projektowym – rzut z góry wykonanym w skali 1:10 ma 
 2 cm x 1 cm
 20 cm x 10 cm
 
-
-!!!23--3
-Rośliny którego zestawu mają białe kwiaty?
-
-Zawilec, lilia, forsycja.
-Mak, rudbekia, jaśminowiec.
-Lilak, konwalia, lilia.
-Brzoza, magnolia, pigwowiec.
 
 
 24--4
@@ -977,7 +941,7 @@ Jaka jest rzeczywista średnica bukietu ślubnego, jeśli na rysunku projektowym
 24 cm
 
 
-29--2(рис)
+29--2 3029
 Gerbery są pakowane przez producentów w kartony przedstawione na rysunku. W celu zabezpieczenia przed uszkodzeniem podczas transportu należy
 
 wyjąć kwiaty z kartonów i umieścić w naczyniach z wodą.
@@ -986,7 +950,7 @@ wyjąć kwiaty z kartonów i umieścić w naczyniach bez wody.
 przygotować kwiaty do użycia przez drutowanie.
 
 
-30--4(рис)
+30--4 3030
 W przypadku możliwości zakupu po bardzo atrakcyjnej cenie 100 pęczków widocznego na rysunku widłaka goździstego (Lycopodium clavatum), pochodzącego z okolicznych lasów, należy
 
 dokonać zakupu, gdyż jest to okazja wprowadzenia nowości do kwiaciarni.
@@ -1030,14 +994,6 @@ umieścić w zimnej wodzie, w zacienionym i chłodnym miejscu.
 zanurzyć w gorącej wodzie.
 
 
-!!!35--4
-Który zestaw roślin należy użyć do przygotowania bukietu o barwie niebiesko-fioletowej?
-
-Chryzantema, szparag, gipsówka.
-Goździk, forsycja, jaskier.
-Lilia, goździk, szparag.
-Ostróżka, zawilec, mikołajek.
-
 
 36--1
 Ile maksymalnie pojemników o długości 40 cm należy ustawić na stole o wymiarach 200 cm x 70 cm, aby uzyskać kompozycję w postaci podłużnego, pojedynczego rzędu umieszczonego wzdłuż dłuższego boku?
@@ -1055,14 +1011,6 @@ Jaka będzie rzeczywista wysokość i szerokość kompozycji florystycznej, jeś
 10 cm x 50 cm
 1000 cm x 500 cm
 1 cm x 5 cm
-
-!!!38--4
-Do wykonania przedstawionego na rysunku bukietu ślubnego typu kamelia, florysta powinien wybrać
-
-kwiaty storczyka.
-płatki bławatka.
-pędy kamelii.
-płatki róży.
 
 
 39--1
@@ -1084,6 +1032,715 @@ miechunki, róży, przetacznika.
 
 
 
-KWALIFIKACJA RL26 - STYCZEŃ 2021
-4+++++
+
+1--1
+Do wykonania której kompozycji najlepiej zastosować złociszki, kocanki i kwiatostany traw?
+
+Palmy wileńskiej.
+Bukietu ślubnego.
+Wianka komunijnego.
+Wieńca adwentowego.
+
+
+2--4 2002
+Na którym rysunku przedstawiono liść fatsji japońskiej?
+A. 
+B. 
+C. 
+D.
+
+3--2
+Który środek techniczny jest przeznaczony do zamocowania gąbki florystycznej w płaskim pojemniku?
+
+Kenzan.
+Pinholder.
+Candleholder.
+Siatka miedziana.
+
+
+4--2
+Które rośliny mają liście o strukturze flauszowej?
+
+Koleus i magnolia.
+Czyściec i szarotka.
+Begonia i helikonia.
+Czyściec i winobluszcz.
+
+
+5--2
+Która czynność przedłuża trwałość kwiatów lewkonii letniej?
+
+Usunięcie pylników.
+Zbiór wraz z korzeniami.
+Wstawienie do zimnej wody.
+Zbiór w stadium niewybarwionych pąków
+
+
+6--3 4006
+Na rysunku przedstawiono kompozycję wykonaną zgodnie z zasadą złotego podziału. Ile wynosi jej wysokość (c), jeśli a = 30 cm?
+
+50 cm
+60 cm
+80 cm
+10 cm
+
+
+7--2
+Które elementy musi zawierać rysunek techniczny stanowiący część dokumentacji projektowej?
+
+Legendę i wymiary kompozycji podane w skali.
+Legendę, skalę i wymiary rzeczywiste kompozycji.
+Legendę z podaną ilością poszczególnych elementów i skalę.
+Legendę z podaną ilością poszczególnych elementów i wymiary rzeczywiste kompozycji.
+
+
+8--2
+W kompozycji o kolorach komplementarnych, kwiaty żółte należy połączyć
+
+z czerwonymi w stosunku ¼ do ¾.
+z fioletowymi w stosunku ¼ do ¾.
+z czerwonymi w stosunku ½ do ½.
+z fioletowymi w stosunku ½ do ½.
+
+
+9--3 4009
+Przedstawiona na rysunku roślina to
+
+Lilium.
+Hippeastrum.
+Alstroemeria.
+Ornithogalum.
+
+
+10--3 4010
+Dozowanie odżywki do kwiatów ciętych. Na podstawie zamieszczonej informacji oblicz, ile saszetek zawierających 5 ml żelu należy rozpuścić w 1,5 l wody.
+
+1 saszetkę.
+2 saszetki.
+3 saszetki.
+4 saszetki.
+
+
+11--4
+Które rośliny są przydatne do wykonania wianka komunijnego?
+
+Aspidistra wyniosła, bluszcz pospolity i funkia.
+Bergenia sercolistna, eukaliptus i mahonia pospolita.
+Barwinek pospolity, golteria shallon i sagowiec.
+Szparag modrzewiowy, mirt pospolity i ruszczyk.
+
+
+12--1
+Który zestaw środków technicznych nadaje się do wykonania wieńca rzymskiego ze stroiszu?
+
+Wianek ze słomy i drut na kołku.
+Wianek z wikliny i haftki rzymskie.
+Ring ze styropianu i plastelina florystyczna.
+Ring z gąbki do żywych roślin i drut wyrobowy.
+
+
+13--1
+Florysta otrzymał zamówienie na letni bukiet okolicznościowy. Który zestaw roślin powinien wybrać?
+
+Cynie, dalie i lwie paszcze.
+Jaskry, niezapominajki i tulipany.
+Chryzantemy, nawłocie i zatrwiany.
+Ciemierniki, dereń biały i poinsecje.
+
+
+14--2
+Które rośliny balkonowe sadzi się przy podporach?
+
+Fuksję i petunię ogrodową.
+Kobeę i groszek pachnący.
+Begonię bulwiastą i werbenę.
+Lobelię i pelargonię bluszczolistną.
+
+
+15--3
+Który zestaw roślin nadaje się do aranżacji okna o wystawie północnej?
+
+Aloes, azalia i kordylina.
+Bugenwilla, kalanchoe i nolina.
+Begonia królewska, bluszcz i fitonia.
+Eszeweria, fiołek afrykański i męczennica.
+
+
+16--3
+Które pojemniki najlepiej nadają się do wnętrz barokowych?
+
+Słoje aptekarskie i gliniane konwie.
+Ceramiczne amfory i wiklinowe kosze.
+Alabastrowe urny i ciężkie porcelanowe wazony.
+Rogi obfitości i porcelanowe naczynia o etruskiej ornamentyce
+
+
+17--4 4017
+Na rysunku przedstawiono wieniec, którym w starożytności nagradzano zwycięzców igrzysk. Do jego wykonania zastosowano
+
+rozmaryn.
+oliwkę.
+mirt.
+laur.
+
+
+18--1
+Który środek techniczny najlepiej wybrać do wykonania niewielkiej dekoracji zawieszanej na brzegu ławki kościelnej?
+
+Clip.
+Floret.
+Garnet.
+Mikrofon.
+
+
+19--3 4019
+Który zestaw narzędzi, poza nożem i sekatorem, należy zastosować do wykonania kompozycji przedstawionej na rysunku?
+
+Nożyczki, obcęgi i taker.
+Cążki, kombinerki i obcęgi.
+Cążki, nożyczki i szczypce półokrągłe.
+Kombinerki, szczypce półokrągłe i taker.
+
+
+20--1
+Opis zamieszczony w ramce dotyczy „… na liściach w miejscach nakłóć widoczne są drobne jasne plamki. Żeruje masowo, głównie na najmłodszych częściach rośliny, powodując ich deformację i zahamowanie wzrostu.”
+
+mszyc.
+chrząszczy.
+miseczników.
+przędziorków.
+
+
+21--2
+Do zwalczania mączniaka prawdziwego i fuzariozy stosuje się
+
+herbicydy.
+fungicydy.
+akarycydy.
+nematocydy.
+
+
+22--4
+Przenawożenie azotem w trakcie uprawy skutkuje
+
+chlorozą międzyżyłkową na starszych liściach.
+zahamowaniem wzrostu rośliny i jasnozielonym zabarwieniem liści.
+zasychaniem brzegów liści i obniżeniem odporności na niekorzystne warunki.
+wybujałym wzrostem rośliny, opóźnieniem kwitnienia i skróceniem trwałości pozbiorczej.
+
+
+23--3
+Do wybielania szyszek modrzewia stosuje się
+boraks.
+glicerynę.
+perhydrol.
+krzemionkę.
+
+
+24--3
+W jaki sposób należy suszyć rośliny przeznaczone do wykonania płaskiego kolażu?
+
+Na siatce.
+Metodą zielarską.
+Metodą zielnikową.
+W pozycji naturalnej
+
+
+25--1
+Trwałość słoneczników, które na skutek transportu bez dostępu do wody utraciły turgor, można poprawić stosując
+
+zaparzanie.
+watowanie.
+szynowanie.
+woskowanie.
+
+
+26--2
+Która taśma stosowana jest w technice watowania?
+
+Kotwica.
+Maskująca.
+Plastelinowa.
+Antypoślizgowa.
+
+
+27--1
+Stosowanie kleju do żywych roślin wymaga szczególnych środków ostrożności ze względu na
+
+toksyczne opary.
+szybkie schnięcie.
+możliwość poparzenia.
+możliwość porażenia prądem.
+
+
+28--2
+Na zieloną ścianę w holu hotelowym o umiarkowanym oświetleniu najlepiej zastosować
+
+anturium, dracenę wonną i hoję.
+epipremnum, nefrolepis i zielistkę.
+kalanchoe, skrzydłokwiat i szeflerę.
+alokazję, figowca sprężystego i eszewerię.
+
+
+29--4
+W celu przyciągnięcia uwagi zwiedzających do dekoracji stoiska wystawowego najlepiej przeznaczyć dobrze widoczne kwiaty w kolorze
+
+białym.
+bordowym.
+niebieskim.
+pomarańczowym.
+
+
+30--1
+Zgodnie ze sztuką w zawodzie wykonany bukiet spiralny charakteryzuje
+
+promienisty układ łodyg i wiązanie pojedyncze.
+równoległy układ łodyg i wiązanie pojedyncze.
+promienisty układ łodyg i wiązanie podwójne.
+równoległy układ łodyg i wiązanie podwójne.
+
+
+31--3
+Wskaż cechy wykonanej zgodnie ze sztuką w zawodzie kompozycji florystycznej w stylu formalno-linearnym.
+
+Materiał roślinny silnie przycięty i ciasno ułożony, kształt kompozycji odzwierciedlający kształt podkładu.
+Dobór roślin występujących obok siebie w naturze, zachowanie ich wzajemnych proporcji i naturalnego charakteru wzrostu.
+Mała ilość materiału roślinnego, dobór roślin o oryginalnych i kontrastowych kształtach i liniach, wolna przestrzeń między roślinami.
+Bogactwo materiału, brak wolnej przestrzeni między roślinami, drobne lub nierozwinięte kwiaty umieszczane na obrzeżach kompozycji.
+
+
+32--4
+Na suche i słoneczne stanowisko najlepiej polecić
+
+epifity.
+higrofity.
+hydrofity.
+sukulenty.
+
+
+33--3
+W przypadku których roślin sprzedawca powinien poinformować klienta o ich trujących lub silnie drażniących właściwościach, stanowiących zagrożenie dla życia lub zdrowia?
+
+Aloesu i opuncji.
+Lauru i rozmarynu.
+Difenbachii i oleandra.
+Dzbanecznika i rosiczki.
+
+
+34--4
+Które rodzaje wyrobów florystycznych wykonywane są jako dekoracje pogrzebowe?
+
+Pnącze i wianek.
+Naręcze i wodospad.
+Korsarz i wiązanka angielska.
+Poduszka i wieniec warszawski.
+
+
+35--3
+Który składnik należy dodać do podłoża w uprawie roślin balkonowych, aby ograniczyć częstotliwość ich podlewania?
+
+Torf.
+Glinę.
+Hydrożel.
+Keramzyt.
+
+
+36--2
+Skrócenie trwałości bukietu z róż, lwich paszczy i chryzantem gałązkowych nastąpi po
+
+skośnym podcięciu pędów.
+pozostawieniu uszkodzonych liści.
+umieszczeniu w niskiej temperaturze powietrza.
+zastosowaniu preparatów pochłaniających etylen.
+
+
+37--3
+Który zakres temperatury jest odpowiedni do przechowywania kwiatów anturium?
+
+0 ÷ 3°C
+5 ÷ 8°C
+13 ÷ 15°C
+18 ÷ 21°C
+
+
+38--1
+W jaki sposób należy przechowywać wianek z białych róż, aby maksymalnie wydłużyć jego trwałość?
+
+Owinięty zwilżoną bibułą, w chłodni o temperaturze 4 ÷ 6°C
+Całkowicie zanurzony w misce z wodą, w chłodni o temperaturze 4 ÷ 6°C
+W kartonowym pudełku, w suchym pomieszczeniu o temperaturze 10 ÷ 15°C
+Opakowany celofanem, w wilgotnym pomieszczeniu o temperaturze 10 ÷ 15°C
+
+
+39--3
+Którym materiałem należy zabezpieczyć bukiet okolicznościowy na czas transportu w upalny dzień?
+
+Kryzą z krepiny.
+Kryzą z organzy.
+Cienkim papierem.
+Tekturowym papierem.
+
+
+40--2
+Które kwiaty producenci pakują do pudełek i zabezpieczają fiolkami z wodą?
+
+Eustomy i róże.
+Anturia i storczyki.
+Gipsówki i goździki.
+Chryzantemy i piwonie.
+
+
+
+
+1--2
+Które rośliny mają liście o strukturze flauszowej?
+
+Koleus i magnolia.
+Czyściec i szarotka.
+Begonia i helikonia.
+Czyściec i winobluszcz.
+
+
+2--2  5002
+W kompozycji wykonanej z zasuszonych roślin zastosowano miesiącznicę roczną, dmuszek jajowaty i zatrwian szerokolistny. Elementami ozdobnymi wymienionych gatunków są
+A
+B
+C
+D
+
+3--2
+Drut o jakiej średnicy należy zastosować do drutowania roślin o bardzo delikatnych łodygach?
+
+0,1 mm
+0,5 mm
+0,9 mm
+1,3 mm
+
+
+4--4
+Na rysunku projektowym wykonanym w skali 1:4 kompozycja ma wysokość 15 cm. Ile wynosi rzeczywista wysokość kompozycji?
+
+40 cm
+50 cm
+60 cm
+80 cm
+
+
+5--1
+Rzeczywista długość kompozycji, która wynosi 75 cm, na rysunku projektowym ma wymiar 25 cm. Oblicz skalę wykonania rysunku.
+
+1:3
+1:5
+1:7
+1:9
+
+
+6--2 5006
+Długość kompozycji przedstawionej na rysunku wynosi 40 cm. Jaka powinna być jej wysokość zgodnie z zasadą złotego podziału?
+
+20 cm
+25 cm
+30 cm
+35 cm
+
+
+7--3 5007
+Ile wynosi szerokość (x) ramion krzyża łacińskiego przedstawionego na rysunku?
+
+20 cm
+30 cm
+40 cm
+50 cm
+
+
+8--4
+Z którą regułą matematyczną powiązana jest zasada złotego podziału, wykorzystywana w tworzeniu kompozycji florystycznych o właściwych proporcjach?
+
+Z zasadą Newtona.
+Z teorią Kartezjusza.
+Z ciągiem Fibonacciego.
+Z twierdzeniem Pitagorasa.
+
+
+9--2
+Który wzorzec wykorzystywany we florystyce stworzył malarz Philipp Otto Runge?
+
+Zasadę złotego podziału.
+Układ barw w kształcie kuli.
+Schemat rysowania projektu.
+Kadrowanie w fotografii florystycznej.
+
+
+10--4 5010
+Na którym rysunku przedstawiono dekorację typu korsarz?
+
+A. 
+B. 
+C. 
+D.
+
+
+11--4 5011
+Na rysunku przedstawiono kompozycję, w której zastosowano puste w środku pędy rośliny. Którą z wymienionych roślin wykorzystano w kompozycji?
+
+Cornus alba.
+Salix babylonica.
+Corylus avellana.
+Fallopia sachalinensis.
+
+
+12--3
+Które z wymienionych roślin stosuje się do obsadzania pojemników na tarasie na stanowisku półcienistym?
+
+Hedera helix, Pelargonium hortorum, Tagetes erecta.
+Lobelia erinus, Salvia splendens, Tagetes erecta.
+Coleus blumei, Glechoma hederacea, Impatiens hawkeri.
+Salvia splendens, Sanvitalia procumbens, Tagetes erecta.
+
+
+13--4 5013
+Która z przedstawionych roślin będzie dobrze rosła w słabo oświetlonych pomieszczeniach?
+
+A. 
+B. 
+C. 
+D.
+
+
+14--2
+Z okazji Świąt Bożego Narodzenia nad drzwiami umieszczono girlandę ze stroiszu. Określ właściwą technikę wykonania girlandy, której podstawą jest długi i gruby sznurek.
+
+Nawlekanie.
+Owijanie drutem.
+Klejenie na zimno.
+Klejenie na gorąco.
+
+
+15--1 5015
+Określ zastosowanie ciętych, świeżych pędów rośliny przedstawionej na rysunku.
+
+Element zieleni stosowanej do bukietów.
+Element konstrukcyjny do bukietów.
+Obsadzenie skrzynek balkonowych.
+Obsadzenie oczek wodnych.
+
+
+16--4
+W którym stadium hippeastrum i amarylis osiągają dojrzałość do cięcia?
+
+Pełnego rozkwitu.
+Widocznych pylników.
+Całkowicie zielonych pąków.
+Zamkniętych, wybarwionych pąków.
+
+
+17--1 5017
+Na którym rysunku przedstawiono auto corso midi?
+
+A. 
+B. 
+C. 
+D.
+
+18--2 5018
+Które narzędzie przeznaczone jest do przycinania zdrewniałych pędów roślin?
+А.
+B.
+C.
+D.
+
+19--4
+Określ sposób umożliwiający skuteczne zwalczanie tarczników i miseczników.
+
+Zdrapywanie kolonii szkodników.
+Wycieranie łodyg i liści wilgotną szmatką.
+Stosowanie środków chemicznych o działaniu kontaktowym.
+Stosowanie środków chemicznych o działaniu systemicznym.
+
+
+20--4
+Które z wymienionych objawów są charakterystyczne dla szarej pleśni?
+
+Biały mączysty nalot po obu stronach blaszki liściowej.
+Ciemne plamy z białą obwódką na blaszkach liściowych.
+Różowy nalot wyłącznie na spodniej stronie blaszki liściowej.
+Brunatne plamy na spodniej stronie blaszki liściowej, mączysty nalot w miejscach plam.
+
+
+21--3
+Na czym polega preparowanie roślin metodą szkieletowania?
+
+Na oczyszczaniu gałęzi z kory.
+Na tworzeniu szkieletu z pędów roślin.
+Na pozbawianiu liści tkanki miękiszowej.
+Na usunięciu z łodyg tkanki miękiszowej.
+
+
+22--2
+Haftki rzymskie we florystyce służą do
+
+przypinania ozdób florystycznych do włosów.
+przymocowywania zieleni do podkładu ze słomy.
+przymocowywania dekoracji florystycznej do ściany.
+przypinania kwiatów do klapy marynarki Pana Młodego.
+
+
+23--2 5023
+Wskaż, która z wymienionych w tabeli proporcji będzie właściwa dla utworzenia kompozycji z kwiatów koloru żółtego i fioletowego przy komplementarnym doborze barw.
+A
+B
+C
+D
+
+
+24--2
+Zgodnie z zasadą złotego podziału dekoracja wieńca rzymskiego roślinami ozdobnymi nie powinna przekraczać
+
+1/2 powierzchni wieńca.
+1/3 powierzchni wieńca.
+1/6 powierzchni wieńca.
+1/8 powierzchni wieńca.
+
+
+25--2
+Określ położenie barw komplementarnych na kole barw.
+
+Leżą obok siebie.
+Leżą naprzeciwko siebie.
+Są oddalone od siebie o kąt 60o
+Są oddalone od siebie o kąt 90o
+
+
+26--4 5026)
+Jaki typ wiązanki przedstawiono na rysunku?
+
+Wiązankę graficzną.
+Wiązankę angielską.
+Wiązankę kameliową.
+Wiązankę strukturalną.
+
+
+27--2 5027
+Dla której epoki charakterystyczna jest kompozycja przedstawiona na rysunku?
+
+Dla baroku.
+Dla secesji.
+Dla renesansu.
+Dla romantyzmu
+
+
+28--1
+Które z wymienionych roślin są odpowiednie do dekoracji wnętrza urządzonego w stylu HI–TECH?
+
+Anturium i juka.
+Kroton i sępolia.
+Amarylis i sępolia.
+Oleaner i skrzydłokwiat.
+
+
+29--4
+Kokedama to
+
+płaskie naczynie do uprawy bonsai.
+odzaj naczynia codziennego użytku.
+bambusowe naczynie do sporządzania ikebany.
+kula ziemi otoczona mchem, w której rośnie roślina.
+
+
+30--4
+Gdzie w dekoracjach wiszących umieszczany jest punkt wzrostu kompozycji, utworzonej zgodnie z zasadą złotego podziału?
+
+W jednej ósmej wysokości liczonej od dołu.
+W jednej ósmej wysokości liczonej od góry.
+W jednej trzeciej wysokości liczonej od dołu.
+W jednej trzeciej wysokości liczonej od góry.
+
+
+31--3 5031
+Na którym rysunku przedstawiono kompozycję w stylu wegetatywnym?
+A.
+B. 
+C. 
+D.
+
+32--3 5032
+Wiązankę graficzną wykonano z 1 czosnku ozdobnego, 3 gerber, 3 liści anturium, 1 liścia kordyliny i 1 rafii.<br>Na podstawie danych w tabeli oblicz koszt całkowity wiązanki, doliczając 30% kosztu robocizny.<br>Materiał roślinny, techniczny i dekoracyjny Cena 1 sztuki w zł<br>Czosnek ozdobny 5,00<br>Gerbera 3,00<br>Liść anturium 1,50<br>Liść kordyliny 1,00<br>Rafia fioletowa 0,5 m 0,50<br>
+
+20,00 zł
+22,00 zł
+26,00 zł
+30,00 zł
+
+
+33--4
+Wskaż kształt charakterystyczny dla ślubnej wiązanki angielskiej.
+
+Kula.
+Stożek.
+Trójkąt różnoboczny.
+Trójkąt równoramienny.
+
+
+34--4
+Wieniec adwentowy pochodzi
+z Belgii.
+z Anglii.
+z Austrii.
+z Niemiec.
+
+
+35--4
+Która z wymienionych grup składa się z roślin o właściwościach trujących?
+
+Dianthus, Gladiolus, Glorioza.
+Ficus benjamina, Viburnum opulus, Viola odorata.
+Dendranthema sp., Pelargonium peltatum, Strelitzia.
+Convalaria majalis, Euphorbia pulcherima, Taxus baccata.
+
+
+36--3
+Dla którego z wymienionych biomów charakterystyczne są rośliny storczykowate?
+
+Stepy.
+Sawanna.
+Wilgotne lasy równikowe.
+Roślinność śródziemnomorska.
+
+
+37--4 37
+Określ właściwy sposób podlewania rośliny przedstawionej na rysunku.
+
+Zraszanie.
+Zanurzenie w wodzie.
+Nalewanie wody do doniczki.
+Nalewanie wody do podstawki.
+
+
+38--4
+Określ sposób postępowania, który zapewni najdłuższą trwałość ozdób komunijnych z żywych kwiatów chryzantemy gałązkowej, przechowywanych w warunkach domowych.
+
+Umieszczenie na talerzu z wodą.
+Umieszczenie w suchym pomieszczeniu bez dostępu światła.
+Umieszczenie w lodówce w temp. ok. 10 – 12oC i zabezpieczenie folią.
+Umieszczenie w lodówce w temp. ok. 4 – 6oC i owinięcie wilgotną bibułą.
+
+
+39--2
+Od czego zależy trwałość fizjologiczna kwiatów ciętych przy zachowaniu właściwych warunków otoczenia?
+
+Od sposobu cięcia.
+Od gatunku i fazy cięcia.
+Od stopnia zdrewnienia łodyg.
+Od techniki układania kwiatów.
+
+
+40--3
+Który zabieg wykonywany u producenta przedłuża trwałość kwiatów po ścięciu?
+
+Ogrzewanie.
+Zamgławianie.
+Kondycjonowanie.
+Zanurzanie całych roślin w wodzie
+
+
 
