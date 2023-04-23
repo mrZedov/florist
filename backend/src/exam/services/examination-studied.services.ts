@@ -44,16 +44,19 @@ export class ExaminationStudiedService {
     const result = [];
     let countName = +process.env.ALTERNATIVE_NAME_CARD - 1;
     const em = (this.orm.em as EntityManager).fork();
-    const cardNames = await this.examinationAnswersCrudService.find({
-      examinationTickets: id,
-    });
+    const cardNames = (
+      await this.examinationAnswersCrudService.find({
+        examinationTickets: id,
+      })
+      )
+      // .map((el) => {        return el.name;      });
     // const cardNames1 = await em.getConnection().execute(      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'      `   );
-    // while (countName-- > 0) {
-    //   const idx = Math.floor(Math.random() * (cardNames.length - 1));
-    //   result.push(cardNames[idx].name);
-    //   cardNames.splice(idx, 1);
-    // }
-    return result;
+    while (countName-- > 0) {
+      const idx = Math.floor(Math.random() * (cardNames.length - 1));
+      result.push(cardNames[idx].name);
+      cardNames.splice(idx, 1);
+    }
+     return result;
   }
 
   async findStudiedCard(userId): Promise<any> {

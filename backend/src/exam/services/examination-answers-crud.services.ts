@@ -27,13 +27,11 @@ export class ExaminationAnswersCrudService {
   //   });
   // }
 
-  async find(where) {
+  async find(where): Promise<any> {
     return await this.repository.find(where);
   }
 
   async findOne(where) {
     return await this.repository.findOne(where);
   }
-
 }
-

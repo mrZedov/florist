@@ -27,8 +27,6 @@ export class ExaminationImportService {
   }
 
   async importFile(filePath) {
-    console.log("");
-    console.log("Import file ", filePath);
     let currentQ;
     const txt = fs.readFileSync(filePath).toString().split("\n");
     for (const strTxt of txt) {
