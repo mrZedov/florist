@@ -723,7 +723,7 @@ jałowiec chiński.
 klon japoński.
 
 
-2--3 рис 3002
+2--3 3002
 Który środek techniczny przeznaczony jest do wykonania kompozycji przedstawionej na rysunku?
 
 Pinholder.
@@ -1611,7 +1611,7 @@ Są oddalone od siebie o kąt 60o
 Są oddalone od siebie o kąt 90o
 
 
-26--4 5026)
+26--4 5026
 Jaki typ wiązanki przedstawiono na rysunku?
 
 Wiązankę graficzną.
@@ -1707,7 +1707,7 @@ Wilgotne lasy równikowe.
 Roślinność śródziemnomorska.
 
 
-37--4 37
+37--4 5037
 Określ właściwy sposób podlewania rośliny przedstawionej na rysunku.
 
 Zraszanie.
