@@ -1,7 +1,7 @@
 <template>
   <div class="container" v-if="studiedCards.id">
     <header class="jumbotron">
-      <div v-if="studiedCards.id">
+      <div v-if="studiedCards.picture">
         <img :src="`/volume/${studiedCards.picture}`" />
       </div>
       <div v-if="studiedCards.id" class="centered">
