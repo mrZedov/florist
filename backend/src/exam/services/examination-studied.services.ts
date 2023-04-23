@@ -48,11 +48,11 @@ export class ExaminationStudiedService {
       examinationTickets: id,
     });
     // const cardNames1 = await em.getConnection().execute(      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'      `   );
-    while (countName-- > 0) {
-      const idx = Math.floor(Math.random() * (cardNames.length - 1));
-      result.push(cardNames[idx].name);
-      cardNames.splice(idx, 1);
-    }
+    // while (countName-- > 0) {
+    //   const idx = Math.floor(Math.random() * (cardNames.length - 1));
+    //   result.push(cardNames[idx].name);
+    //   cardNames.splice(idx, 1);
+    // }
     return result;
   }
 
@@ -71,13 +71,8 @@ export class ExaminationStudiedService {
         )}
         `
     );
-    const result = rec[0]
-    result.name = this.processing(result.name)
-    return { ...rec[0] };
-  }
-
-  processing(name){
-    return name
+    const result = rec[0];
+    return { ...result };
   }
 
   private async addStudiedCards(data) {
@@ -96,7 +91,9 @@ export class ExaminationStudiedService {
 
     let i = 0;
     while (i < data.count) {
-      await this.create({ card: freeCards[i++], userId: data.userId });
+      if (freeCards.length > i)
+        await this.create({ card: freeCards[i], userId: data.userId });
+      i++;
     }
   }
 
