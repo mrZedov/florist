@@ -51,8 +51,8 @@ export class ExaminationStudiedService {
     ).map((el) => {
       return el.name;
     });
-    console.log('cardNames ', id)
-    console.log(cardNames)
+    console.log("cardNames ", id);
+    console.log(cardNames);
     return cardNames;
     // const cardNames1 = await em.getConnection().execute(      `select distinct c.name from cards c where c.deleted=false and c.name<>'${name}'      `   );
     while (countName-- > 0) {
@@ -65,6 +65,9 @@ export class ExaminationStudiedService {
 
   async findStudiedCard(userId): Promise<any> {
     const em = (this.orm.em as EntityManager).fork();
+    const recCount = await em
+      .getConnection()
+      .execute(`select count(*) from examination_studied`);
     const rec = await em.getConnection().execute(
       `
         select c.id, c.name as name, studied_c.success, studied_c.fail, etp.path as picture from examination_tickets c 
@@ -74,7 +77,7 @@ export class ExaminationStudiedService {
         left join examination_tickets_pictures etp on etp.examination_tickets_id=studied_c.examination_tickets_id
         order by studied_c.updated
         limit 1 offset ${Math.round(
-          Math.random() * (+process.env.CARDS_IN_STUDIING / 3)
+          Math.random() * (+recCount[0].count / 3)
         )}
         `
     );
