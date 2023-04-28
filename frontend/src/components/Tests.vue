@@ -4,17 +4,23 @@
       <div v-if="studiedCards.picture">
         <img :src="`/volume/${studiedCards.picture}`" />
       </div>
-      <div v-if="studiedCards.id" class="centered">
-        <!-- {{ studiedCards.id }} -->
+      <div v-if="studiedCards.id" class="studiedCards, text-left">
         <b><span v-html="studiedCards.name"></span></b>
       </div>
+      <br />
       <button
         v-if="studiedCards.id"
-        :class="['btn', 'btn-block', { 'btn-primary': haveAnswer() }]"
+        :class="[
+          'btn',
+          'btn-block',
+          { 'btn-outline-primary': !haveAnswer() },
+          { 'btn-primary': haveAnswer() },
+        ]"
         v-on:click="onClickNextCard()"
       >
         следующий
       </button>
+
       <blog-post
         v-for="name in alternativeName"
         v-bind:key="name"
@@ -23,8 +29,11 @@
         <br />
         <button
           :class="[
+            'text-left',
             'btn',
             'btn-block',
+            { 'btn-outline-dark': !isError(name) && !isSuccess(name) },
+            { 'btn-light': !isError(name) && !isSuccess(name) },
             { 'btn-danger': isError(name) },
             { 'btn-success': isSuccess(name) },
           ]"
@@ -123,5 +132,9 @@
 
   .centered {
     text-align: center;
+  }
+
+  .studiedCards {
+    padding: 50px;
   }
 </style>
