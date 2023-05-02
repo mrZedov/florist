@@ -22,11 +22,26 @@ class AuthService {
   }
 
   register(user) {
-    return axios.post(API_URL + "users", {
-      login: user.username,
-      email: user.email,
-      password: user.password,
-    });
+    return axios
+      .post(API_URL + "users", {
+        login: user.username,
+        email: user.email,
+        password: user.password,
+      })
+      // +++ Сделать авторизацию при регистрации
+      // .then(() => {
+      //   axios
+      //     .post(API_URL + "auth/login", {
+      //       username: user.username,
+      //       password: user.password,
+      //     })
+      //     .then((response) => {
+      //       if (!response.data.error) {
+      //         localStorage.setItem("user", JSON.stringify(response.data));
+      //       }
+      //       return response.data;
+      //     });
+      // });
   }
 }
 

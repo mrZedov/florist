@@ -21,4 +21,7 @@ export class Users {
 
   @Property({ default: false, type: 'boolean' })
   deleted: boolean;
+
+  @Property({ nullable: true, length: 300 })
+  email: string;
 }

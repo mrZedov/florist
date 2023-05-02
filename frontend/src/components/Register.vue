@@ -104,7 +104,8 @@
           (data) => {
             this.message = data.message;
             this.successful = true;
-            this.loading = false;
+            this.loading = true;
+            this.$router.push("/exams");
           },
           (error) => {
             this.message =

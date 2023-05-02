@@ -1,26 +1,16 @@
 <template>
   <div class="container" v-if="studiedCards.id">
     <header class="jumbotron">
-      <div v-if="studiedCards.picture">
-        <img :src="`/volume/${studiedCards.picture}`" />
+      <div v-if="studiedCards.id">
+        <img :src="`/volume/${studiedCards.id}.${studiedCards.file_ext}`" />
       </div>
-      <div v-if="studiedCards.id" class="studiedCards, text-left">
-        <b><span v-html="studiedCards.name"></span></b>
-      </div>
-      <br />
       <button
         v-if="studiedCards.id"
-        :class="[
-          'btn',
-          'btn-block',
-          { 'btn-outline-primary': !haveAnswer() },
-          { 'btn-primary': haveAnswer() },
-        ]"
+        :class="['btn', 'btn-block', { 'btn-primary': haveAnswer() }]"
         v-on:click="onClickNextCard()"
       >
         следующий
       </button>
-
       <blog-post
         v-for="name in alternativeName"
         v-bind:key="name"
@@ -29,11 +19,8 @@
         <br />
         <button
           :class="[
-            'text-left',
             'btn',
             'btn-block',
-            { 'btn-outline-dark': !isError(name) && !isSuccess(name) },
-            { 'btn-light': !isError(name) && !isSuccess(name) },
             { 'btn-danger': isError(name) },
             { 'btn-success': isSuccess(name) },
           ]"
@@ -60,7 +47,7 @@
       };
     },
     mounted() {
-      UserService.getExam().then(
+      UserService.getCard().then(
         (response) => {
           this.studiedCards = response.data.studiedCards;
           this.alternativeName = response.data.alternativeName;
@@ -78,7 +65,7 @@
     },
     methods: {
       onClickNextCard() {
-        UserService.getExam().then(
+        UserService.getCard().then(
           (response) => {
             this.studiedCards = response.data.studiedCards;
             this.alternativeName = response.data.alternativeName;
@@ -105,7 +92,7 @@
         return n === this.answer;
       },
       onClickNameFlower(id, n) {
-        UserService.sendAnswerExam(id, n).then(
+        UserService.sendAnswer(id, n).then(
           (response) => {
             console.log(response.data);
             this.rightAnswer = response.data.rightAnswer;
@@ -128,13 +115,5 @@
 <style scoped>
   img {
     width: 100%;
-  }
-
-  .centered {
-    text-align: center;
-  }
-
-  .studiedCards {
-    padding: 50px;
   }
 </style>

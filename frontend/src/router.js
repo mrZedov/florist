@@ -1,24 +1,26 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "./components/Home.vue";
-import Tests from "./components/Tests.vue";
+// import Home from "./components/Home.vue";
+// import Tests from "./components/Tests.vue";
 import Login from "./components/Login.vue";
 import Register from "./components/Register.vue";
 // lazy-loaded
-const Profile = () => import("./components/Profile.vue")
-const BoardAdmin = () => import("./components/BoardAdmin.vue")
-const BoardModerator = () => import("./components/BoardModerator.vue")
-const BoardUser = () => import("./components/BoardUser.vue")
+const Profile = () => import("./components/Profile.vue");
+const BoardAdmin = () => import("./components/BoardAdmin.vue");
+const BoardModerator = () => import("./components/BoardModerator.vue");
+const BoardUser = () => import("./components/BoardUser.vue");
+const Exams = () => import("./components/Exams.vue");
+const Tests = () => import("./components/Tests.vue");
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: Home,
-  },
-  {
-    path: "/home",
-    component: Home,
-  },
+  // {
+  //   path: "/",
+  //   name: "home",
+  //   component: Exams,
+  // },
+  // {
+  //   path: "/home",
+  //   component: Home,
+  // },
   {
     path: "/login",
     component: Login,
@@ -29,8 +31,15 @@ const routes = [
   },
   {
     path: "/tests",
-    name: "tests",
+    name: "Tests",
+    // lazy-loaded
     component: Tests,
+  },
+  {
+    path: "/exams",
+    name: "Exams",
+    // lazy-loaded
+    component: Exams,
   },
   {
     path: "/profile",

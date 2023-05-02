@@ -743,6 +743,16 @@
           "nullable": false,
           "default": "false",
           "mappedType": "boolean"
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(300)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 300,
+          "mappedType": "string"
         }
       },
       "name": "users",
