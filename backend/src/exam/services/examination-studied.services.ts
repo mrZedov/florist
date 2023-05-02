@@ -67,7 +67,7 @@ export class ExaminationStudiedService {
     const em = (this.orm.em as EntityManager).fork();
     const recCount = await em
       .getConnection()
-      .execute(`select count(*) from examination_studied`);
+      .execute(`select count(*) from examination_studied where user_id = ${userId}`);
     const rec = await em.getConnection().execute(
       `
         select c.id, c.name as name, studied_c.success, studied_c.fail, etp.path as picture from examination_tickets c 
