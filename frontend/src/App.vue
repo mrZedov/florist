@@ -40,12 +40,12 @@
       </div>
 
       <div v-if="currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <!-- <li class="nav-item"> //+++
           <router-link to="/profile" class="nav-link">
             <font-awesome-icon icon="user" />
             {{ currentUser.username }}
           </router-link>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" @click.prevent="logOut">
             <font-awesome-icon icon="sign-out-alt" /> LogOut
