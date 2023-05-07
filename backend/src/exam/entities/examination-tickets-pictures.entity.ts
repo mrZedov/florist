@@ -1,4 +1,10 @@
-import { Entity, ManyToOne, PrimaryKey, Property } from "@mikro-orm/core";
+import {
+  Cascade,
+  Entity,
+  ManyToOne,
+  PrimaryKey,
+  Property,
+} from "@mikro-orm/core";
 import { ExaminationTickets } from "./examination-tickets.entity";
 
 @Entity({ tableName: "examination_tickets_pictures" })
@@ -9,6 +15,9 @@ export class ExaminationTicketsPictures {
   @Property()
   path: string;
 
-  @ManyToOne(() => ExaminationTickets, { nullable: false })
+  @ManyToOne(() => ExaminationTickets, {
+    nullable: false,
+    cascade: [Cascade.ALL],
+  })
   examinationTickets: ExaminationTickets;
 }

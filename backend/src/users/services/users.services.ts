@@ -1,4 +1,4 @@
-import { EntityData } from "@mikro-orm/core";
+import { EntityData, wrap } from "@mikro-orm/core";
 import { InjectRepository } from "@mikro-orm/nestjs";
 import { EntityRepository } from "@mikro-orm/postgresql";
 import {
@@ -13,7 +13,7 @@ import { Users } from "../entities/users.entity";
 export class UsersService {
   constructor(
     @InjectRepository(Users)
-    private readonly repository: EntityRepository<Users> // private readonly orm: MikroORM,
+    private readonly repository: EntityRepository<Users>
   ) {}
 
   public async create(data: any, user?: any): Promise<any> {
@@ -36,6 +36,14 @@ export class UsersService {
     } catch (e) {
       throw new InternalServerErrorException(2, "Database error");
     }
+    return rec;
+  }
+
+  async update(id: number, updateDto?: any): Promise<any> {
+    const rec = await this.repository.findOne(id);
+    if (updateDto) wrap(rec).assign(updateDto);
+    rec.update = new Date();
+    await this.repository.persistAndFlush(rec);
     return rec;
   }
 

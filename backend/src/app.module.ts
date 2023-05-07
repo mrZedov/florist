@@ -3,6 +3,7 @@ import { Module } from "@nestjs/common";
 import { AuthModule } from "./auth/auth.module";
 import { CardsModule } from "./cards/cards.module";
 import { ExaminationModule } from "./exam/examination.module";
+import { LogModule } from "./log/log.module";
 import { UsersModule } from "./users/users.module";
 
 @Module({
@@ -12,6 +13,7 @@ import { UsersModule } from "./users/users.module";
     AuthModule,
     CardsModule,
     ExaminationModule,
+    LogModule,
   ],
   controllers: [],
   providers: [],

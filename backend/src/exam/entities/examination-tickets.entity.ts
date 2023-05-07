@@ -1,6 +1,4 @@
 import {
-  Cascade,
-  Collection,
   Entity,
   OneToMany,
   OneToOne,
@@ -15,27 +13,18 @@ export class ExaminationTickets {
   @PrimaryKey()
   id!: number;
 
-  @Property({length:2000})
+  @Property({ length: 2000 })
   name: string;
 
-  @OneToMany(
-    () => ExaminationAnswers,
-    (examinationAnswers) => examinationAnswers.examinationTickets,
-    { cascade: [Cascade.REMOVE], orphanRemoval: true }
-  )
-  examinationAnswers = new Collection<ExaminationAnswers>(this);
+  @OneToMany(() => ExaminationAnswers, (e) => e.examinationTickets)
+  examinationAnswers: ExaminationAnswers[];
 
-  @OneToMany(
-    () => ExaminationTicketsPictures,
-    (examinationTicketsPictures) => examinationTicketsPictures.examinationTickets,
-    { cascade: [Cascade.ALL], orphanRemoval: true }
-  )
-  examinationTicketsPictures = new Collection<ExaminationTicketsPictures>(this);
-  
-  @OneToOne(
-    () => ExaminationAnswers,
-    (examinationAnswersTrue) => examinationAnswersTrue.examinationTicketsTrue,
-    { owner: true, nullable: true }
-  )
+  @OneToMany(() => ExaminationTicketsPictures, (e) => e.examinationTickets)
+  examinationTicketsPictures: ExaminationTicketsPictures[];
+
+  @OneToOne(() => ExaminationAnswers, (e) => e.examinationTicketsTrue, {
+    owner: true,
+    nullable: true,
+  })
   examinationAnswersTrue: ExaminationAnswers;
 }

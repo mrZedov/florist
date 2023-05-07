@@ -2,7 +2,7 @@
   <div class="container" v-if="studiedCards.id">
     <header class="jumbotron">
       <div v-if="studiedCards.picture">
-        <img :src="`/volume/${studiedCards.picture}`" />
+        <img :src="`/volume/pic-exam/${studiedCards.picture}`" />
       </div>
       <div v-if="studiedCards.id" class="studiedCards, text-left">
         <b><span v-html="studiedCards.name"></span></b>
@@ -44,6 +44,27 @@
       </blog-post>
     </header>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        Правильных ответов
+        <font size="5" color="008000"
+          ><b>{{ studiedCards.success }}</b></font
+        ><br />
+        Ошибочных ответов
+        <font size="5" color="FF0000"
+          ><b>{{ studiedCards.fail }}</b></font
+        >
+      </div>
+      <div class="column"></div>
+      <div class="column">
+        Общий прогресс
+        <font size="6" color="008000"
+          ><b>{{ totalSuccess }}</b></font
+        >
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -81,6 +102,7 @@
         UserService.getExam().then(
           (response) => {
             this.studiedCards = response.data.studiedCards;
+            this.totalSuccess = response.data.totalSuccess;
             this.alternativeName = response.data.alternativeName;
             (this.answer = ""), (this.rightAnswer = "");
           },
@@ -105,21 +127,21 @@
         return n === this.answer;
       },
       onClickNameFlower(id, n) {
-        UserService.sendAnswerExam(id, n).then(
-          (response) => {
-            console.log(response.data);
-            this.rightAnswer = response.data.rightAnswer;
-            this.answer = response.data.answer;
-          },
-          (error) => {
-            this.content =
-              (error.response &&
-                error.response.data &&
-                error.response.data.message) ||
-              error.message ||
-              error.toString();
-          }
-        );
+        if (!this.answer)
+          UserService.sendAnswerExam(id, n).then(
+            (response) => {
+              this.rightAnswer = response.data.rightAnswer;
+              this.answer = response.data.answer;
+            },
+            (error) => {
+              this.content =
+                (error.response &&
+                  error.response.data &&
+                  error.response.data.message) ||
+                error.message ||
+                error.toString();
+            }
+          );
       },
     },
   };
@@ -129,12 +151,38 @@
   img {
     width: 100%;
   }
-
   .centered {
     text-align: center;
   }
-
   .studiedCards {
     padding: 50px;
+  }
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    border: 0px dotted #999;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+  .column {
+    max-width: 100%;
+    min-height: 1px;
+    border: 0px dotted #939;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 </style>

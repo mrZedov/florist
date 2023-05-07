@@ -16,7 +16,7 @@ export class ExaminationTicketsPicturesCrudService {
     return newRec;
   }
 
-  async find(where) {
+  async find(where?) {
     return await this.repository.find(where);
   }
 

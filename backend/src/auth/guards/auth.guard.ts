@@ -11,7 +11,9 @@ export class JwtAuthGuard implements CanActivate {
     const request = context.switchToHttp().getRequest();
 
     const user = await this.usersService.findById(request.user.id);
-    // if (user.superuser === true) {
+    if (user) {
+      await this.usersService.update(user.id);
+    }
     return true;
     // }
 

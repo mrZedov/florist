@@ -1,5 +1,6 @@
 import { MikroOrmModule } from "@mikro-orm/nestjs";
 import { Module } from "@nestjs/common";
+import { LogModule } from "src/log/log.module";
 import { UsersModule } from "src/users/users.module";
 import { ExaminationController } from "./controllers/examination.controller";
 import { ExaminationAnswers } from "./entities/examination-answers.entity";
@@ -23,6 +24,7 @@ import { ExaminationTicketsPicturesCrudService } from "./services/examination-ti
       ExaminationTicketsPictures,
     ]),
     UsersModule,
+    LogModule,
   ],
   providers: [
     ExaminationAnswersCrudService,

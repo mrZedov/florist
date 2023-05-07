@@ -1,4 +1,5 @@
 import {
+  Cascade,
   Entity,
   ManyToOne,
   OneToOne,
@@ -15,9 +16,12 @@ export class ExaminationAnswers {
   @Property()
   name: string;
 
-  @ManyToOne(() => ExaminationTickets, { nullable: false })
+  @ManyToOne(() => ExaminationTickets, {
+    nullable: false,
+    cascade: [Cascade.ALL],
+  })
   examinationTickets: ExaminationTickets;
 
-  @OneToOne({ mappedBy: 'examinationAnswersTrue', orphanRemoval: true })
+  @OneToOne({ mappedBy: "examinationAnswersTrue", orphanRemoval: true })
   examinationTicketsTrue: ExaminationTickets;
 }
