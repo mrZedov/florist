@@ -230,6 +230,16 @@
           "primary": false,
           "nullable": true,
           "mappedType": "integer"
+        },
+        "year_of_exam": {
+          "name": "year_of_exam",
+          "type": "varchar(100)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 100,
+          "mappedType": "string"
         }
       },
       "name": "examination_tickets",

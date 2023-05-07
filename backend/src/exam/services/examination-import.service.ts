@@ -49,11 +49,11 @@ export class ExaminationImportService {
   async importCheckFiles(files) {
     for (const file of files) {
       const filePath = "./volume/" + file;
-      await this.importFile(filePath);
+      await this.importFile(filePath, file);
     }
   }
 
-  async importFile(filePath) {
+  async importFile(filePath, file) {
     let countTicket = 0;
     let currentQ;
     const fileName = filePath.split("/").pop().replace(".txt", "");
@@ -68,6 +68,7 @@ export class ExaminationImportService {
         currentQ.answerTrue = question.answerTrue;
         currentQ.answer = [];
         currentQ.picture = question.picture;
+        currentQ.yearOfExam = file;
       } else {
         if (!currentQ) continue;
         if (!currentQ.question) {
@@ -92,6 +93,7 @@ export class ExaminationImportService {
     // if (recTickets) return;
     const recTicketsNew = await this.examinationTicketsCrudService.create({
       name: q.question,
+      yearOfExam: q.yearOfExam,
     });
     if (q.picture)
       await this.examinationTicketsPicturesCrudService.create({

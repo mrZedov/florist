@@ -27,4 +27,7 @@ export class ExaminationTickets {
     nullable: true,
   })
   examinationAnswersTrue: ExaminationAnswers;
+
+  @Property({ length: 100, nullable: true })
+  yearOfExam: string;
 }
