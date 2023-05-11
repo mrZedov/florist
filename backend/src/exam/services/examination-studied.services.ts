@@ -28,12 +28,13 @@ export class ExaminationStudiedService {
     const rec = await em
       .getConnection()
       .execute(
-        `select count(*) as "countExems", sum(progress) "countProgress" from examination_studied es where es.user_id=${userId}`
+        `select sum(success) success, sum(fail) fail from examination_studied es where es.user_id=${userId}`
       );
-    const result = rec[0];
-    const maxScore = +process.env.MAX_EXAM_PROGRESS * +result.countExems;
-    if (!maxScore) return 0;
-    return Math.floor((result.countProgress / maxScore) * 10000) / 100 + "%";
+    return rec.shift()
+    // const result = rec[0];
+    // const maxScore = +process.env.MAX_EXAM_PROGRESS * +result.countExems;
+    // if (!maxScore) return 0;
+    // return Math.floor((result.countProgress / maxScore) * 10000) / 100 + "%";
   }
 
   async getStudied(userId: number) {

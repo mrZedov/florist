@@ -47,20 +47,13 @@
   <div class="container">
     <div class="row">
       <div class="column">
-        Правильных ответов
+        ответов
         <font size="5" color="008000"
-          ><b>{{ studiedCards.success }}</b></font
-        ><br />
-        Ошибочных ответов
-        <font size="5" color="FF0000"
-          ><b>{{ studiedCards.fail }}</b></font
+          ><b> {{totalSuccess.success}}</b></font
         >
-      </div>
-      <div class="column"></div>
-      <div class="column">
-        Общий прогресс
-        <font size="6" color="008000"
-          ><b>{{ totalSuccess }}</b></font
+        /
+        <font size="5" color="FF0000"
+          ><b> {{totalSuccess.fail}} </b></font
         >
       </div>
     </div>
@@ -78,6 +71,7 @@
         alternativeName: "",
         answer: "",
         rightAnswer: "",
+        totalSuccess:'',
       };
     },
     mounted() {
@@ -85,6 +79,7 @@
         (response) => {
           this.studiedCards = response.data.studiedCards;
           this.alternativeName = response.data.alternativeName;
+          this.totalSuccess = response.data.totalSuccess;
           (this.answer = ""), (this.rightAnswer = "");
         },
         (error) => {
@@ -104,6 +99,7 @@
             this.studiedCards = response.data.studiedCards;
             this.totalSuccess = response.data.totalSuccess;
             this.alternativeName = response.data.alternativeName;
+            this.totalSuccess = response.data.totalSuccess;
             (this.answer = ""), (this.rightAnswer = "");
           },
           (error) => {
